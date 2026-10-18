@@ -135,7 +135,7 @@ const index = () => {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const res = await axios.get(`https://internshala-clone-y2p2.onrender.com/api/job/${id}`);
+        const res = await axios.get(`https://internconnect-782f.onrender.com/api/job/${id}`);
         setjob(res.data);
       } catch (error) {
         console.log(error);
@@ -173,7 +173,7 @@ const index = () => {
         availability,
       };
       await axios.post(
-        "https://internshala-clone-y2p2.onrender.com/api/application",
+        "https://internconnect-782f.onrender.com/api/application",
         applicationdata
       );
       toast.success(t("detailInternship.toasts.submitSuccess"));

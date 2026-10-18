@@ -71,7 +71,7 @@ const index = () => {
   useEffect(()=>{
     const fetchdata=async()=>{
       try {
-        const res=await axios.get( "https://internshala-clone-y2p2.onrender.com/api/internship")     
+        const res=await axios.get( "https://internconnect-782f.onrender.com/api/internship")     
         setinternship(res.data)
         setfilteredInternships(res.data)
       } catch (error) {
