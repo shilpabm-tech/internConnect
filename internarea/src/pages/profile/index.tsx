@@ -8,7 +8,7 @@ import { useTranslation } from "next-i18next/pages";
 import axios from "axios";
 import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 
-const LOGIN_SECURITY_BASE = "http://localhost:5000/api/auth/login-security";
+const LOGIN_SECURITY_BASE = `${process.env.NEXT_PUBLIC_API_URL}/api/auth/login-security`;
 const HISTORY_PAGE_SIZE = 10;
 
 interface LoginHistoryRecord {

@@ -13,7 +13,7 @@ export async function getServerSideProps({ locale }: { locale: string }) {
   };
 }
 
-const POST_URL = "http://localhost:5000/api/post";
+const POST_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/post`;
 
 interface PostUser {
   _id: string;

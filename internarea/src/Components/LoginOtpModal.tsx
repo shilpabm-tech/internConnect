@@ -3,7 +3,7 @@ import axios from "axios";
 import { X, Loader2 } from "lucide-react";
 import { useTranslation } from "next-i18next/pages";
 
-const LOGIN_SECURITY_BASE = "http://localhost:5000/api/auth/login-security";
+const LOGIN_SECURITY_BASE = `${process.env.NEXT_PUBLIC_API_URL}/api/auth/login-security`;
 
 interface LoginOtpModalProps {
   isOpen: boolean;

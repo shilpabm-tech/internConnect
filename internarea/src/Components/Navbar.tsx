@@ -14,9 +14,8 @@ import axios from "axios";
 import AuthModal from "./AuthModal";
 import FrenchOtpModal from "./FrenchOtpModal";
 
-const NOTIFICATION_BASE = "http://localhost:5000/api/notification";
-const LANGUAGE_OTP_BASE = "http://localhost:5000/api/auth/language-otp";
-
+const NOTIFICATION_BASE = `${process.env.NEXT_PUBLIC_API_URL}/api/notification`;
+const LANGUAGE_OTP_BASE = `${process.env.NEXT_PUBLIC_API_URL}/api/auth/language-otp`;
 const LANGUAGES = [
   { code: "en", label: "English" },
   { code: "es", label: "Español" },

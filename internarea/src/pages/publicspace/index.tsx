@@ -26,10 +26,10 @@ export async function getStaticProps({ locale }: { locale: string }) {
   };
 }
 
-const UPLOAD_URL = "http://localhost:5000/api/upload";
-const POST_URL = "http://localhost:5000/api/post";
-const FEED_URL = "http://localhost:5000/api/post";
-const FRIEND_BASE = "http://localhost:5000/api/friend";
+const UPLOAD_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/upload`;
+const POST_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/post`;
+const FEED_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/post`;
+const FRIEND_BASE = `${process.env.NEXT_PUBLIC_API_URL}/api/friend`;
 
 const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50MB, mirrors backend limit (Step 12)
 const ALLOWED_TYPES = [

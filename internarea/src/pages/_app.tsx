@@ -15,7 +15,7 @@ import axios from "axios";
 import { appWithTranslation, useTranslation } from "next-i18next/pages";
 import LoginOtpModal from "@/Components/LoginOtpModal";
 
-const LOGIN_SECURITY_BASE = "http://localhost:5000/api/auth/login-security";
+const LOGIN_SECURITY_BASE = `${process.env.NEXT_PUBLIC_API_URL}/api/auth/login-security`;
 
 // What the backend decided for a sign-in. Computed once per signed-in user by
 // runSecurityCheck() and then only *applied* by the listener below.
@@ -119,7 +119,7 @@ async function runSecurityCheck(authuser: FirebaseUser): Promise<GateResult> {
 
     console.error("Login security check unavailable, falling back:", error?.message);
     try {
-      const fallback = await axios.post("http://localhost:5000/api/user/sync", {
+      const fallback = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/user/sync`, {
         firebaseUid: authuser.uid,
         name: authuser.displayName,
         email: authuser.email,

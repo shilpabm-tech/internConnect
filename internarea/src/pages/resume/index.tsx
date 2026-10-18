@@ -16,9 +16,9 @@ export async function getStaticProps({ locale }: { locale: string }) {
   };
 }
 
-const RESUME_BASE = "http://localhost:5000/api/resume";
-const SUB_BASE = "http://localhost:5000/api/subscription";
-const UPLOAD_URL = "http://localhost:5000/api/upload";
+const RESUME_BASE = `${process.env.NEXT_PUBLIC_API_URL}/api/resume`;
+const SUB_BASE = `${process.env.NEXT_PUBLIC_API_URL}/api/subscription`;
+const UPLOAD_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/upload`;
 const RAZORPAY_SCRIPT_SRC = "https://checkout.razorpay.com/v1/checkout.js";
 const RESUME_FEE_DISPLAY = 50;
 

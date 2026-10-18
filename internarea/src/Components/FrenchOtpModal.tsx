@@ -3,7 +3,7 @@ import axios from "axios";
 import { X, Loader2 } from "lucide-react";
 import { useTranslation } from "next-i18next/pages";
 
-const OTP_BASE = "http://localhost:5000/api/auth/language-otp";
+const OTP_BASE = `${process.env.NEXT_PUBLIC_API_URL}/api/auth/language-otp`;
 
 interface FrenchOtpModalProps {
   isOpen: boolean;

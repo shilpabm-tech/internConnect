@@ -14,7 +14,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
   };
 }
 
-const RESET_BASE = "http://localhost:5000/api/auth/forgot-password";
+const RESET_BASE = `${process.env.NEXT_PUBLIC_API_URL}/api/auth/forgot-password`;
 
 // Must match MIN_PASSWORD_LENGTH / MAX_PASSWORD_LENGTH in
 // backend/Routes/passwordReset.js (the backend enforces them too).

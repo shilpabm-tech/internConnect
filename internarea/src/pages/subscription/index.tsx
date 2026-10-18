@@ -15,7 +15,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
   };
 }
 
-const SUB_BASE = "http://localhost:5000/api/subscription";
+const SUB_BASE = `${process.env.NEXT_PUBLIC_API_URL}/api/subscription`;
 const RAZORPAY_SCRIPT_SRC = "https://checkout.razorpay.com/v1/checkout.js";
 
 interface Plan {
