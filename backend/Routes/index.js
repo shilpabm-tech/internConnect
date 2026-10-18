@@ -1,0 +1,33 @@
+const express = require("express");
+const router = express.Router();
+const admin = require("./admin");
+const intern = require("./internship");
+const job = require("./job");
+const application = require("./application");
+const user = require("./user");
+const friend = require("./friend");
+const post = require("./post");
+const upload = require("./upload");
+const notification = require("./notification");
+const passwordReset = require("./passwordReset");
+const subscription = require("./subscription");
+const resume = require("./resume");
+const languageVerification = require("./languageVerification");
+const loginSecurity = require("./loginSecurity");
+
+router.use("/admin", admin);
+router.use("/internship", intern);
+router.use("/job", job);
+router.use("/application", application);
+router.use("/user", user);
+router.use("/friend", friend);
+router.use("/post", post);
+router.use("/upload", upload);
+router.use("/notification", notification);
+router.use("/auth/forgot-password", passwordReset);
+router.use("/subscription", subscription);
+router.use("/resume", resume);
+router.use("/auth/language-otp", languageVerification);
+router.use("/auth/login-security", loginSecurity);
+
+module.exports = router;
